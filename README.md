@@ -2,6 +2,10 @@
 
 A production-ready CI/CD pipeline that automates **testing, building, monitoring, and deployment** of a Node.js application using **GitHub Actions, Docker, and Prometheus**.
 
+
+![Prometheus Metrics](./screenshots/prometheus-metrics2.png)
+
+
 ## ⭐ Project Highlights
 
 - ✅ Fully automated CI/CD pipeline with GitHub Actions
@@ -11,6 +15,17 @@ A production-ready CI/CD pipeline that automates **testing, building, monitoring
 - ✅ Prometheus monitoring integration
 - ✅ Health check endpoints
 - ✅ Production-ready architecture
+
+
+## 🛠 Tech Stack
+
+|Category      |Technology|
+|--------------|----------------|
+|**Runtime**|Node.js, Express.js|
+|**CI/CD**|GitHub Actions|
+|**Containerization**|Docker, Docker Hub|
+|**Testing**|Jest, Supertest|
+|**Monitoring**|Prometheus (prom-client)|
 
 ## 📦 Docker Image
 
@@ -22,14 +37,6 @@ Pull the latest image:
 docker pull poojadasdev/nodejs-app:latest
 
 ```
-
-## 🛠 Tech Stack
-
-- **Application**: **Node.js, Express.js**
-- **CI/CD:** **GitHub Actions**
-- **Containerization: Docker & Docker Hub**
-- **Testing:** **Jest + Supertest**
-- **Monitoring:** **Prometheus (prom-client)**
 
 ## 🏗 Architecture
 
@@ -58,15 +65,7 @@ Developer → GitHub → CI Pipeline → Tests → Docker Build → Docker Hub �
 - Deployment notifications
 - Ready for cloud deployment integration
 
-## 📡 Monitoring & Metrics
 
-Prometheus metrics available at: **`/metrics`**
-
-**Tracks:**
-
-- Total HTTP requests
-- Request method, route, and status
-- Application and Node.js runtime metrics
 
 ## 🚦 Getting Started
 
@@ -90,16 +89,30 @@ npm install
 # Run tests
 npm test
 
+# Access the application at http://localhost:3000
+```
+
+### 🐳 Docker Setup
+```bash
 # Build Docker image
 docker build -t nodejs-app:latest .
 
 # Run container
 docker run -p 3000:3000 nodejs-app:latest
+
+# Run in detached mode
+docker run -d -p 3000:3000 --name nodejs-app nodejs-app:latest
+
+# View logs
+docker logs nodejs-app
 ```
 
 ## 🔧 GitHub Secrets Configuration
 
-Set these secrets in your GitHub repository (`Settings → Secrets and variables → Actions`):
+To enable the CI/CD pipeline, configure these secrets in your GitHub repository:
+
+**Path** (`Settings → Secrets and variables → Actions → New repository secret`):
+
 
 | Secret Name | Description |
 | --- | --- |
@@ -113,6 +126,18 @@ Set these secrets in your GitHub repository (`Settings → Secrets and variables
 | `/` | Welcome message |
 | `/health` | Health check |
 | `/metrics` | Prometheus metrics |
+
+
+## 📡 Monitoring & Metrics
+
+Prometheus metrics available at: **`/metrics`**
+
+**Tracks:**
+
+- Total HTTP requests
+- Request method, route, and status
+- Application and Node.js runtime metrics
+
 
 ## ✨ Features
 
@@ -148,15 +173,8 @@ Set these secrets in your GitHub repository (`Settings → Secrets and variables
 
   ### Docker Hub Repository
   
-  ![Docker Hub](./screenshots/docker-hub.png)
-    
+  ![Docker Hub](./screenshots/docker-hub.png)  
 
-    
-
-- Docker Hub repository
-    
-    ![Screenshot 2025-12-02 at 5.54.51 PM.png](attachment:93f39c0d-28f4-4f4f-821f-68dd8fa8932f:Screenshot_2025-12-02_at_5.54.51_PM.png)
-    
 
 ## 🔄 Pipeline Stages Overview
 
