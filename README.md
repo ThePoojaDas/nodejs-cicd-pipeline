@@ -80,20 +80,20 @@ Prometheus metrics available at: **`/metrics`**
 ### 🚀 Local Setup
 
 ```bash
-*# Clone the repository*
+# Clone the repository
 git clone https://github.com/ThePoojaDas/nodejs-cicd-pipeline
 cd nodejs-cicd-pipeline
 
-*# Install dependencies*
+# Install dependencies
 npm install
 
-*# Run tests*
+# Run tests
 npm test
 
-*# Build Docker image*
+# Build Docker image
 docker build -t nodejs-app:latest .
 
-*# Run container*
+# Run container
 docker run -p 3000:3000 nodejs-app:latest
 ```
 
@@ -125,25 +125,32 @@ Set these secrets in your GitHub repository (`Settings → Secrets and variables
 
 ## 📸 Screenshots
 
-- GitHub Actions workflow
+  ### GitHub Actions Workflow
     
-    ![image.png](attachment:0068e8b3-1cc5-4bbf-a5c9-de5c65b5820f:image.png)
+   ![GitHub Actions](./screenshots/github-actions.png)
     
-- Running application
+  ### Running Application
     
-    ![image.png](attachment:267747f1-e728-4d60-a480-784c5ac16017:image.png)
+   ![Application Running](./screenshots/app-running.png)
     
-    - Prometheus metrics dashboard
+ ### Prometheus Metrics Dashboard
     
-    ![image.png](attachment:68ccffb4-0927-41b6-91e2-a6c615a8f76a:image.png)
+  ![Prometheus Metrics](./screenshots/prometheus-metrics1.png)
+  
+  ![Prometheus Metrics](./screenshots/prometheus-metrics2.png)
+
+  ![Prometheus Metrics](./screenshots/prometheus-metrics3.png)
+
+  ![Prometheus Metrics](./screenshots/prometheus-metrics4.png)
+
+  ![Prometheus Metrics](./screenshots/prometheus-metrics5.png)
+
+
+  ### Docker Hub Repository
+  
+  ![Docker Hub](./screenshots/docker-hub.png)
     
-    ![image.png](attachment:47b12b82-1081-4470-8e95-190133c65a1f:image.png)
-    
-    ![image.png](attachment:92506dc7-9801-4137-b6bd-5b3578a04640:image.png)
-    
-    ![Screenshot 2025-12-02 at 5.51.24 PM.png](attachment:4ddbdb4d-cb48-4905-ba3f-7ba08c98c3b4:Screenshot_2025-12-02_at_5.51.24_PM.png)
-    
-    ![image.png](attachment:82178cfe-0de3-4387-8896-cb585fe9afdc:image.png)
+
     
 
 - Docker Hub repository
